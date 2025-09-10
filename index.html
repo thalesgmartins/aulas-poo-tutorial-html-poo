@@ -40,9 +40,9 @@
             assim como na vida real.
         </p>
 
-        <aside class="tip">
+        <p>
             <p>Um objeto 'Carro' tem atributos <i>(cor, marca, ano)</i> e métodos <i>(acelerar, frear)</i>.</p>
-        </aside>
+        </p>
 
         <h3>E isso funciona mesmo?</h3>
 
@@ -59,7 +59,57 @@
         </li>
 
 
-        <h2>Encapsulamento: A Arte de Proteger e Organizar seu Código</h2>
+        <h2>Encapsulamento: A Arte de Proteger e Organizar o Código</h2>
+
+        <p>
+            Podemos entender o encapsulamento como a ideia de criar uma 'cápsula' protetora ao redor dos dados e comportamentos de um objeto.
+            O objetivo é expor apenas o que é necessário para a interação com outros objetos. 
+        </p>    
+            
+        <p>
+            Podemos pensar nisso como um carro. O motorista controla os pedais e o volante, mas ele não precisa saber como funciona a mecânica
+            do motor.
+        </p>
+
+        <h3>Implementando na prática</h3>
+
+        <h4>Modificadores de Acesso</h4>
+
+        Para controlar o que fica 'dentro' e o que fica 'fora' da cápsula, usamos os modificadores de acesso.
+
+        <ul>
+            <li>public: O atributo ou método é acessível de qualquer lugar do código.</li>
+            <li>private: O atributo ou método só pode ser acessado de dentro da própria classe.</li>
+            <li>protected: É parecido com o private, mas também pode ser acessado por classes filhas.</li>
+        </ul>
+
+        <p>
+            Pensando no nosso carro: O volante e a embreagem seriam atributos públicos, enquanto o motor seria um atributo privado.
+        </p>
+
+        <h4>Mas e se dados importantes são privados, como interagimos com eles?</h4>
+
+        <p> 
+            A resposta é siples, através de métodos públicos que servem como 'porteiros'. 
+            Eles permitem ler (get) e modificar (set) os atributos de forma controlada.
+        </p>
+
+        <ul>
+            <li>Getters: Usados para retornar o valor de um atributo privado.</li>
+            <li>Setters: Usados para alterar o valor de um atributo privado, geralmente incluindo regras e validações.</li>
+        </ul>
+
+        <p>FOTO AQUI COM EXEMPLO DE GETTER E SETTER</p>
+
+        <h3>Por que usar?</h3>
+
+        <p>Adotar o encapsulamento traz benefícios claros para o projeto:</p>
+
+        <ul>
+            <li>Proteção: Evita que os dados de um objeto sejam modificados de forma inesperada ou incorreta.</li>
+            <li>Facilita a Manutenção: Permite alterar a implementação interna de uma classe sem quebrar os códigos que a utilizam.</li>
+            <li>Clareza e Organização: Agrupa dados e comportamentos que pertencem ao mesmo contexto.</li>
+        </ul>
 
         <h2>Anatomia de uma Classe: Desmontando o Exemplo "Caixa Eletrônico"</h2>
 
