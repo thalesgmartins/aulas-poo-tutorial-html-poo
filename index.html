@@ -111,17 +111,207 @@
             <li>Clareza e Organização: Agrupa dados e comportamentos que pertencem ao mesmo contexto.</li>
         </ul>
 
-        <h2>Anatomia de uma Classe: Desmontando o Exemplo "Caixa Eletrônico"</h2>
+        <h2>Anatomia de uma Classe: Desmontando um Caixa Eletrônico</h2>
+
+        <p>
+            Se objetos são as 'coisas' do nosso sistema, então a classe seria o molde que define como essas coisas são construídas. 
+            Nela é determinando quais dados nossos objetos irão armazenar e quais ações poderão executar.
+        </p>
+
+        <p>
+            Para entender melhor vamos considerar que temos uma classe Conta, parte importante do nosso suposto Caixa Eletrônico.
+        </p>
+
+        <h3>Atributos</h3>
+
+        <p>
+            Os atributos são as características ou propriedades que definem um objeto. 
+            Eles são as variáveis que armazenam o estado interno do objeto. 
+        </p>
+
+        <p>
+            No nosso exemplo de uma Conta, os atributos seriam:
+        </p>
+
+        <ul>
+            <li>Número da conta</li>
+            <li>Agência</li>
+            <li>Nome do titular</li>
+            <li>Saldo</li>
+        </ul>
+
+        <h3>O Construtor</h3>
+
+        <p>
+            O construtor é um método especial, executado no momento em que um novo objeto é criado. 
+            Sua função é inicializar os atributos do objeto, garantindo que ele nasça em um estado válido e consistente.
+        </p>
+        
+        <p>
+            Por exemplo, o construtor de uma Conta pode receber o número e o titular como parâmetros para já criar o objeto com esses dados preenchidos.
+        </p>
+
+        <h3>Os Métodos</h3>
+
+        <p>
+            Os métodos definem o comportamento de um objeto, ou seja, as ações que ele pode executar. Para a nossa Conta, ações comuns seriam:"
+        </p>
+
+        <ul>
+            <li>sacar(valor)</li>
+            <li>depositar(valor)</li>
+            <li>verificarSaldo()</li>
+        </ul>
+
+        <p>
+            É importante notar que métoros como sacar() não apenas fazem o saque, mas também contém a lógica para verificar se o saldo é suficiente.
+        </p>
+
+        <h3>A Instância</h3>
+
+        <p>
+            Se temos um molde com atributos, métodos e um construtor, então podemos finalmente criar objetos reais, chamados de 'instâncias'. 
+            Cada instância é uma Conta individual e independente, com seus próprios valores de atributos.
+        </p>
+
+        <code>Conta minhaConta = new Conta(123, "Thales");</code>
 
         <h2>Herança vs. Composição: Reutilizando Código com Inteligência</h2>
 
+        <p>
+            Evitar a repetição é uma das chaves da programação. Dessa forma, A POO nos oferece duas formas de reutilizar e estender funcionalidades: a Herança e a Composição.
+        </p>
+
+        <h3>Aa Herança</h3>
+
+        <p>
+            A herança permite que uma nova classe absorva os atributos e métodos de uma classe existente. 
+            Isso cria uma relação do tipo 'é um'. 
+        </p>
+
+        <p>
+            Por exemplo, um Gerente é um Funcionario. Ele tem tudo que um funcionário tem, mas pode adicionar seus próprios comportamentos, como aprovarVerba().
+        </p>
+
+        <p>COLOCAR AQUI UM CODIGO COM A CLASSE FUNCIONARIO E GERENTE</p>
+
+        <h3>A Composição</h3>
+
+        <p>
+            A composição é usada quando um objeto é construído a partir de outros objetos. 
+            Em vez de herdar, a classe 'contém' uma instância de outra classe. Isso cria uma relação do tipo 'tem um'. 
+        </p>
+            
+        <p>
+            Por exemplo, um Carro tem um Motor. O carro não é um motor..
+        </p>
+
+        <p>COLOCAR AQUI UM CODIGO COM A CLASSE CARRO E MOTOR</p>
+
         <h2>Polimorfismo: Múltiplas Formas, Mesma Interface</h2>
+        
+        <p>
+            Outros dos pilares da POO, trata-se da capacidade de um objeto ser referenciado de múltiplas formas.
+            Na prática, isso permite que diferentes objetos de diferentes classes, possam ter métodos em comum.
+        </p>
+
+        <p>
+            A mesma 'mensagem' enviada a objetos diferentes pode resultar em comportamentos distintos.
+        </p>
+
+        <h3>Na Prática</h3>
+        
+        <p>
+            A forma mais comum de polimorfismo é através da sobrescrita de métodos (override).            
+            Criamos uma implementação específica em uma classe filha, que foi definida como padrão na classe mãe.
+        </p>
+
+        <p>
+            Imagine uma classe Animal com um método fazerSom(). 
+            As classes Cachorro e Gato herdam de Animal, mas cada uma 'sobrescreve' o método fazerSom() para emitir o som correto: 'Au au' e 'Miau'.
+        </p>
+
+        <p>COLOCAR AQUI UM CODIGO COM A CLASSE CACHORRO GATE E ANIMAL</p>
+
+        <h3>A Vantagem</h3>
+
+        <p>
+            O poder do polimorfismo está na flexibilidade. Podemos criar uma lista de Animal e adicionar Cachorro e Gato a ela. 
+            Ao percorrer a lista e chamar animal.fazerSom() para cada item, o Java se encarrega de executar a implementação correta para cada objeto, 
+            sem que precisemos verificar o tipo de cada um.
+        </p>
+
 
         <h2>Lidando com o Inesperado: Controle de Exceções</h2>
 
-        <h2>Contratos e Acoplamento: O Poder das Interfaces</h2>
+        <p>
+            O que acontece quando um usuário tenta sacar um valor maior que o saldo? Ou tenta dividir um número por zero?
+            Em vez de deixar o programa 'quebrar' e fechar, a POO nos dá um mecanismo para capturar e tratar essas situações:
+            o Controle de Exceções.
+        </p>
 
-        <h2>Palavra Final: Vale a Pena Programar Orientado a Objetos?</h2>
+        <h3>A Estrutura <strong>try-catch-finally</strong></h3>
+
+        <p>A principal estrutura para o tratamento de exceções é:</p>
+
+        <ul>
+            <li><strong>try:</strong> Envolve o trecho de código onde um erro pode ocorrer. É a 'tentativa' de executar uma operação de risco.</li>
+            <li><strong>catch:</strong> Captura a exceção, caso ela ocorra. É o nosso plano B, o código que executa para tratar o problema de forma controlada.</li>
+            <li><strong>finally (Opcional):</strong> Este bloco é sempre executado, ocorrendo um erro ou não. É útil para fechar conexões ou limpar recursos.</li>
+        </ul>
+
+        <p>COLOCAR AQUI UM CODIGO COM EXEMPLO DE TRY-CATCH</p>
+
+        <h3>Por que usar?</h3>
+
+        <p>
+            Utilizar o controle de exceções separa a lógica de negócio do tratamento de erros. 
+            Isso torna nosso código mais limpo, legível e, acima de tudo, mais robusto, melhorando a experiência do usuário.
+        </p>
+
+        <h2>Contratos e Acoplamento:</h2>
+
+        <p>
+            Imagine que precisamos garantir que várias classes diferentes, como <strong>RelatorioPDF</strong> e <strong>RelatorioExcel</strong>, 
+            tenham obrigatoriamente um método <strong>gerar()</strong>. Como podemos forçar esse comportamento?
+        </p>
+
+        <p>
+            A resposta são as <strong>Interfaces</strong>. Uma interface funciona como um 'contrato' que uma classe pode assinar.
+            Ao 'implementar' uma interface, a classe se compromete a fornecer uma implementação para todos os métodos definidos no contrato.
+        </p>
+
+        <h3>Assinando o Contrato</h3>
+
+        <p>
+            Uma interface apenas define <strong>o quê</strong> uma classe deve fazer, mas não <strong>como</strong>. 
+            Uma classe pode implementar várias interfaces, diferente da herança, onde ela só pode herdar de uma única classe.
+        </p>
+
+        <p>COLOCAR AQUI UM CODIGO COM UMA INTERFACE E UMA CLASSE IMPLEMENTANDO ELA</p>
+
+        <h3>A Grande Vantagem: Baixo Acoplamento</h3>
+        
+        <p>
+            O maior poder das interfaces é promover o <strong>baixo acoplamento</strong>. 
+            Isso significa que nosso código pode depender do 'contrato' (a interface) em vez de uma classe específica. 
+            Assim, podemos trocar as implementações facilmente (hoje usamos PDF, amanhã usamos Excel) sem quebrar o resto do sistema. 
+            Isso torna o software flexível e adaptável.
+        </p>
+
+        <h2>Vale a Pena Programar Orientado a Objetos?</h2>
+
+        <p>
+            Ao longo desta documentação, exploramos os conceitos que fazem da POO um dos paradigmas mais importantes do mercado.
+            Vimos como organizar o código em classes, protegê-lo com encapsulamento, reutilizá-lo com herança e composição,
+            e torná-lo flexível com polimorfismo e interfaces.
+        </p>
+
+        <p>
+            Então, vale a pena? <strong>Com certeza.</strong> A POO não é só um conjunto de regras, mas uma mentalidade que nos treina
+            para construir sistemas mais organizados, modulares e fáceis de manter. Dominar seus pilares é um passo essencial
+            para escrever software de alta qualidade, preparado para crescer e evoluir com o tempo.
+        </p>
 
     </main>
 
