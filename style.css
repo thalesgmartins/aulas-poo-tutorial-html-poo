@@ -75,3 +75,10 @@ strong {
     color: #e0e0e0;
     font-weight: 600;
 }
+
+.img-documentacao {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    margin-top: 15px;
+}
