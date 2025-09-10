@@ -71,34 +71,39 @@
         </div>
 
         <div>
-
-            
             <h2 id="documentacao-encapsulamento">Encapsulamento: A Arte de Proteger e Organizar o Código</h2>
 
             <p>
-                Podemos entender o encapsulamento como a ideia de criar uma 'cápsula' protetora ao redor dos dados e comportamentos de um objeto.
-                O objetivo é expor apenas o que é necessário para a interação com outros objetos. 
-            </p>    
+                Podemos entender o encapsulamento como uma <code>cápsula protetora</code> ao redor dos dados e comportamentos de um objeto.
+                O objetivo é <strong>expor apenas o que é necessário</strong> para a interação com outros objetos. 
+            </p>
             
             <p>
-                Podemos pensar nisso como um carro. O motorista controla os pedais e o volante, mas ele não precisa saber como funciona a mecânica
-                do motor.
+                Pensando novamente no nosso carro, o motorista controla os <strong><i>pedais e o volante</i></strong>, mas ele <code>não precisa saber como funciona a mecânica
+                do motor</code>.
+            </p>
+
+            <img class="img-documentacao" src="images/poo-exemplo-carro-encapsulamento.png" alt="Exemplo de encapsulamento usando carro">
+
+            <p>
+                Nesse exemplo, <code>Motorista</code> consegue acessar os métodos <code>Acelerar() e Frear()</code>, mas o encapsulamento cria um <i>"escudo"</i>, e então
+                apenas <code>Carro</code> consegue acessar as funções do motor.
             </p>
             
             <h3>Implementando na prática</h3>
             
             <h4>Modificadores de Acesso</h4>
             
-            Para controlar o que fica 'dentro' e o que fica 'fora' da cápsula, usamos os modificadores de acesso.
+            Para controlar o que fica <strong>'dentro'</strong> e o que fica <strong>'fora'</strong> da cápsula, usamos os <code>modificadores de acesso</code>.
             
             <ul>
-                <li>public: O atributo ou método é acessível de qualquer lugar do código.</li>
-                <li>private: O atributo ou método só pode ser acessado de dentro da própria classe.</li>
-                <li>protected: É parecido com o private, mas também pode ser acessado por classes filhas.</li>
+                <li><strong>public:</strong> O atributo ou método é acessível de <code>qualquer lugar do código</code>.</li>
+                <li><strong>private:</strong> O atributo ou método só pode ser acessado de <code>dentro da própria classe</code>.</li>
+                <li><strong>protected:</strong> É parecido com o private, mas também <code>pode ser acessado por classes filhas</code>.</li>
             </ul>
             
             <p>
-                Pensando no nosso carro: O volante e a embreagem seriam atributos públicos, enquanto o motor seria um atributo privado.
+                No nosso carro, o <strong>volante e a embreagem</strong> seriam atributos <code>públicos</code>, enquanto o <strong>motor</strong> seria um atributo <code>privado</code>.
             </p>
             
             <h4>Mas e se dados importantes são privados, como interagimos com eles?</h4>
