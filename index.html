@@ -72,6 +72,81 @@
         
         </div>
 
+                <div>
+            <h2 id="documentacao-abstracao">Anatomia de uma Classe: Desmontando um Caixa Eletrônico</h2>
+            
+            <p>
+                Se objetos são as <code>'coisas'</code> do nosso sistema, então <code>uma classe seria um molde</code> que define como essas coisas são construídas. 
+                Nela é determinando quais dados nossos objetos <strong>irão armazenar</strong> e quais ações poderão executar.
+            </p>
+            
+            <p>
+                Para entender melhor vamos considerar que temos uma classe <code>Conta</code>, parte de um importante <strong>Caixa Eletrônico</strong>.
+            </p>
+
+            <img class="img-documentacao" src="images/poo-exemplo-conta-classe.png" alt="Exemplo de uma classe com poo">
+            
+            <h3>Atributos</h3>
+            
+            <p>
+                Os atributos são as <code>características ou propriedades</code> que definem um objeto. 
+                Eles são as variáveis que <strong>armazenam seu estado interno</strong>. 
+            </p>
+            
+            <p>
+                No nosso exemplo de uma <code>Conta</code>, os atributos seriam:
+            </p>
+            
+            <ul>
+                <li>Número da conta;</li>
+                <li>Agência;</li>
+                <li>Nome do titular;</li>
+                <li>Saldo.</li>
+            </ul>
+
+            <img class="img-documentacao" src="images/poo-exemplo-conta-atributos.png" alt="Exemplo de atributos com poo">
+            
+            <h3>O Construtor</h3>
+            
+            <p>
+                O construtor é um método especial, executado no momento em que um <strong></strong>novo objeto é criado</strong>. 
+                Sua função é inicializar os atributos do objeto, garantindo que ele nasça em um estado <code>válido e consistente</code>.
+            </p>
+            
+            <p>
+                Por exemplo, o construtor de uma <strong>Conta</strong> pode receber o <i>número e o titular</i> como parâmetros para 
+                já criar o objeto com esses dados preenchidos.
+            </p>
+
+            <img class="img-documentacao" src="images/poo-exemplo-conta-construtor.png" alt="Exemplo de construtor">
+            
+            <h3>Os Métodos</h3>
+            
+            <p>
+                Os métodos definem o comportamento de um objeto, ou seja, as ações que ele pode executar. Para a nossa Conta, ações comuns seriam:"
+            </p>
+            
+            <ul>
+                <li>sacar(valor);</li>
+                <li>depositar(valor);</li>
+                <li>verificarSaldo();</li>
+            </ul>
+            
+            <p>
+                É importante notar que métoros como <code>sacar()</code> não apenas fazem o saque, mas também contém a <i>lógica para verificar se o saldo é suficiente</i>.
+            </p>
+            
+            <h3>A Instância</h3>
+            
+            <p>
+                Se temos um molde com atributos, métodos e um construtor, então podemos finalmente <strong>criar objetos reais</strong>, chamados de <strong>'instâncias'</strong>. 
+                Cada instância é uma <code>Conta</code> individual e independente, com seus <strong>próprios valores de atributos</strong>.
+            </p>
+            
+            <code>Conta minhaConta = new Conta(123, "Thales");</code>
+            
+        </div>
+
         <div>
             <h2 id="documentacao-encapsulamento">Encapsulamento: A Arte de Proteger e Organizar o Código</h2>
 
@@ -81,7 +156,7 @@
             </p>
             
             <p>
-                Pensando novamente no nosso carro, o motorista controla os <strong><i>pedais e o volante</i></strong>, mas ele <code>não precisa saber como funciona a mecânica
+                Pensando novamente no nosso <code>Carro</code>, o motorista controla os <strong><i>pedais e o volante</i></strong>, mas ele <code>não precisa saber como funciona a mecânica
                 do motor</code>.
             </p>
 
@@ -133,74 +208,6 @@
                 <li><strong>Facilita a Manutenção:</strong> Permite <strong>alterar a implementação interna</strong> de uma classe <code>sem quebrar os códigos que a utilizam</code>.</li>
                 <li><strong>Clareza e Organização:</strong> Agrupa dados e comportamentos que pertencem ao <strong>mesmo contexto</strong>.</li>
             </ul>
-        </div>
-
-        <div>
-            <h2 id="documentacao-abstracao">Anatomia de uma Classe: Desmontando um Caixa Eletrônico</h2>
-            
-            <p>
-                Se objetos são as 'coisas' do nosso sistema, então a classe seria o molde que define como essas coisas são construídas. 
-                Nela é determinando quais dados nossos objetos irão armazenar e quais ações poderão executar.
-            </p>
-            
-            <p>
-                Para entender melhor vamos considerar que temos uma classe Conta, parte importante do nosso suposto Caixa Eletrônico.
-            </p>
-            
-            <h3>Atributos</h3>
-            
-            <p>
-                Os atributos são as características ou propriedades que definem um objeto. 
-                Eles são as variáveis que armazenam o estado interno do objeto. 
-            </p>
-            
-            <p>
-                No nosso exemplo de uma Conta, os atributos seriam:
-            </p>
-            
-            <ul>
-                <li>Número da conta</li>
-                <li>Agência</li>
-                <li>Nome do titular</li>
-                <li>Saldo</li>
-            </ul>
-            
-            <h3>O Construtor</h3>
-            
-            <p>
-                O construtor é um método especial, executado no momento em que um novo objeto é criado. 
-                Sua função é inicializar os atributos do objeto, garantindo que ele nasça em um estado válido e consistente.
-            </p>
-            
-            <p>
-                Por exemplo, o construtor de uma Conta pode receber o número e o titular como parâmetros para já criar o objeto com esses dados preenchidos.
-            </p>
-            
-            <h3>Os Métodos</h3>
-            
-            <p>
-                Os métodos definem o comportamento de um objeto, ou seja, as ações que ele pode executar. Para a nossa Conta, ações comuns seriam:"
-            </p>
-            
-            <ul>
-                <li>sacar(valor)</li>
-                <li>depositar(valor)</li>
-                <li>verificarSaldo()</li>
-            </ul>
-            
-            <p>
-                É importante notar que métoros como sacar() não apenas fazem o saque, mas também contém a lógica para verificar se o saldo é suficiente.
-            </p>
-            
-            <h3>A Instância</h3>
-            
-            <p>
-                Se temos um molde com atributos, métodos e um construtor, então podemos finalmente criar objetos reais, chamados de 'instâncias'. 
-                Cada instância é uma Conta individual e independente, com seus próprios valores de atributos.
-            </p>
-            
-            <code>Conta minhaConta = new Conta(123, "Thales");</code>
-            
         </div>
 
         <div>
