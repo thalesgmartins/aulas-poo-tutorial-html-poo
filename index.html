@@ -92,7 +92,7 @@
                 apenas <code>Carro</code> consegue acessar as funções do motor.
             </p>
             
-            <h3>Implementando na prática</h3>
+            <h3>Implementando na prática:</h3>
             
             <h4>Modificadores de Acesso</h4>
             
@@ -107,29 +107,31 @@
             <p>
                 No nosso carro, o <strong>volante e a embreagem</strong> seriam atributos <code>públicos</code>, enquanto o <strong>motor</strong> seria um atributo <code>privado</code>.
             </p>
+
+            <img class="img-documentacao" src="images/poo-exemplo-carro-publicos-privados.png" alt="Exemplo de metodos privados e publicos">
             
             <h4>Mas e se dados importantes são privados, como interagimos com eles?</h4>
             
             <p> 
-                A resposta é siples, através de métodos públicos que servem como 'porteiros'. 
-                Eles permitem ler (get) e modificar (set) os atributos de forma controlada.
+                A resposta é simples, através de <strong>métodos públicos</strong> que servem como <i>'porteiros'</i>. 
+                Eles permitem ler <code>(get)</code> e modificar <code>(set)</code> os atributos de forma controlada.
             </p>
             
             <ul>
-                <li>Getters: Usados para retornar o valor de um atributo privado.</li>
-                <li>Setters: Usados para alterar o valor de um atributo privado, geralmente incluindo regras e validações.</li>
+                <li><strong>Getters</strong>: Usados para retornar o valor de um atributo privado.</li>
+                <li><strong>Setters:</strong> Usados para alterar o valor de um atributo privado, geralmente incluindo regras e validações.</li>
             </ul>
             
-            <p>FOTO AQUI COM EXEMPLO DE GETTER E SETTER</p>
-            
+            <img class="img-documentacao" src="images/poo-exemplo-carro-getters-e-setters.png" alt="Exemplo de metodos privados e publicos">
+
             <h3>Por que usar?</h3>
             
             <p>Adotar o encapsulamento traz benefícios claros para o projeto:</p>
             
             <ul>
-                <li>Proteção: Evita que os dados de um objeto sejam modificados de forma inesperada ou incorreta.</li>
-                <li>Facilita a Manutenção: Permite alterar a implementação interna de uma classe sem quebrar os códigos que a utilizam.</li>
-                <li>Clareza e Organização: Agrupa dados e comportamentos que pertencem ao mesmo contexto.</li>
+                <li><strong>Proteção:</strong> Evita que os dados de um objeto sejam modificados de forma <code>inesperada ou incorreta</code>.</li>
+                <li><strong>Facilita a Manutenção:</strong> Permite <strong>alterar a implementação interna</strong> de uma classe <code>sem quebrar os códigos que a utilizam</code>.</li>
+                <li><strong>Clareza e Organização:</strong> Agrupa dados e comportamentos que pertencem ao <strong>mesmo contexto</strong>.</li>
             </ul>
         </div>
 
