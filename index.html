@@ -249,27 +249,33 @@
             <h2 id="documentacao-polimorfismo">Polimorfismo: Múltiplas Formas, Mesma Interface</h2>
             
             <p>
-                Outros dos pilares da POO, trata-se da capacidade de um objeto ser referenciado de múltiplas formas.
-                Na prática, isso permite que diferentes objetos de diferentes classes, possam ter métodos em comum.
+                Quando falamos de polimorfismo, falamos sobre a capacidade de <strong>um objeto ser referenciado de múltiplas formas</strong>.
+                Na prática, isso permite que <strong>diferentes objetos</strong> de <strong>diferentes classes</strong>, possam ter <doce>métodos em comum</doce>.
             </p>
             
             <p>
-                A mesma 'mensagem' enviada a objetos diferentes pode resultar em comportamentos distintos.
+                O <strong>mesmo comando</strong> enviado a objetos diferentes pode resultar em <strong>comportamentos distintos</strong>.
             </p>
             
             <h3>Na Prática</h3>
             
             <p>
-                A forma mais comum de polimorfismo é através da sobrescrita de métodos (override).            
-                Criamos uma implementação específica em uma classe filha, que foi definida como padrão na classe mãe.
+                A forma mais comum de polimorfismo é através da <code>sobrescrita de métodos</code> <i><strong>(override)</strong></i>.            
+                Isso é'muito utilizado quando criamos uma implementação específica em uma <code>classe filha</code>, que foi definida como padrão na classe mãe.
             </p>
             
             <p>
-                Imagine uma classe Animal com um método fazerSom(). 
-                As classes Cachorro e Gato herdam de Animal, mas cada uma 'sobrescreve' o método fazerSom() para emitir o som correto: 'Au au' e 'Miau'.
+                Imagine uma classe <code>Animal</code> com um método <code>fazerSom()</code>.
+                E que as classes <code>Cachorro</code> e <code>Gato</code> herdam de <code>Animal</code>.
             </p>
+
+            <img class="img-documentacao" src="images/poo-exemplo-animal-polimorfismo.png" alt="Exemplo de Encapsulamento Polimorfismo com Animais">
             
-            <p>COLOCAR AQUI UM CODIGO COM A CLASSE CACHORRO GATE E ANIMAL</p>
+            <p>
+                Aplicando o polimorfismo, cada uma <i>'sobrescreve'</i> o método <code>fazerSom()</code> para emitir o som correto: <code>'Au au'</code> e '<code>Miau'</code>.
+            </p>
+
+            <img class="img-documentacao" src="images/poo-exemplo-animal-polimorfismo2.png" alt="Exemplo de Encapsulamento Polimorfismo com Animais">
             
             <h3>A Vantagem</h3>
             
