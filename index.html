@@ -321,47 +321,44 @@
             <h2>Contratos e Acoplamento:</h2>
             
             <p>
-                Imagine que precisamos garantir que várias classes diferentes, como <strong>RelatorioPDF</strong> e <strong>RelatorioExcel</strong>, 
-                tenham obrigatoriamente um método <strong>gerar()</strong>. Como podemos forçar esse comportamento?
+                Se temos um sistema de ERP, onde precisamos garantir que várias classes diferentes, como <code>RelatorioPDF</code> e <code>RelatorioExcel</code>, 
+                tenham <strong>obrigatoriamente</strong> um método <code>gerar()</code>.
             </p>
             
             <p>
-                A resposta são as <strong>Interfaces</strong>. Uma interface funciona como um 'contrato' que uma classe pode assinar.
-                Ao 'implementar' uma interface, a classe se compromete a fornecer uma implementação para todos os métodos definidos no contrato.
+                A forma que fazemos isso são as <code>Interfaces</code>. Uma interface funciona como um <code>'contrato'</code>.
+                Ao implementar uma interface, a classe <strong>se compromete a fornecer uma implementação</strong> para <code>todos</code> os métodos definidos no contrato.
             </p>
             
             <h3>Assinando o Contrato</h3>
             
             <p>
-                Uma interface apenas define <strong>o quê</strong> uma classe deve fazer, mas não <strong>como</strong>. 
-                Uma classe pode implementar várias interfaces, diferente da herança, onde ela só pode herdar de uma única classe.
+                Uma interface apenas define <code>o quê</code> uma classe <strong>deve</strong> fazer, mas não <strong>como</strong>. 
+                Uma classe pode implementar <strong>várias interfaces</strong>, diferente da herança, onde ela <strong>só pode herdar de uma única classe</strong>.
             </p>
             
-            <p>COLOCAR AQUI UM CODIGO COM UMA INTERFACE E UMA CLASSE IMPLEMENTANDO ELA</p>
+            <img class="img-documentacao" src="images/poo-exemplo-erp-interface.png" alt="Exemplo de Interface com um ERP">
             
-            <h3>A Grande Vantagem: Baixo Acoplamento</h3>
+            <h3>Baixo Acoplamento</h3>
             
             <p>
-                O maior poder das interfaces é promover o <strong>baixo acoplamento</strong>. 
-                Isso significa que nosso código pode depender do 'contrato' (a interface) em vez de uma classe específica. 
-                Assim, podemos trocar as implementações facilmente (hoje usamos PDF, amanhã usamos Excel) sem quebrar o resto do sistema. 
-                Isso torna o software flexível e adaptável.
+                O maior poder das interfaces é promover o <code>baixo acoplamento</code>. 
+                Isso significa que nosso código pode depender do <strong>'contrato'</strong> e não de uma classe específica. 
+                Assim, podemos trocar as implementações sem quebrar o resto do sistema. 
             </p>
         </div>
 
         <div>
-            <h2>Vale a Pena Programar Orientado a Objetos?</h2>
+            <h2>Conclusão: Vale a Pena Programar Orientado a Objetos?</h2>
             
             <p>
-                Ao longo desta documentação, exploramos os conceitos que fazem da POO um dos paradigmas mais importantes do mercado.
+                Ao longo desta documentação, exploramos os conceitos que aprendemos nas primeiras aulas, e que tornam a poo muito importante em projetos.
                 Vimos como organizar o código em classes, protegê-lo com encapsulamento, reutilizá-lo com herança e composição,
                 e torná-lo flexível com polimorfismo e interfaces.
             </p>
             
             <p>
-                Então, vale a pena? <strong>Com certeza.</strong> A POO não é só um conjunto de regras, mas uma mentalidade que nos treina
-                para construir sistemas mais organizados, modulares e fáceis de manter. Dominar seus pilares é um passo essencial
-                para escrever software de alta qualidade, preparado para crescer e evoluir com o tempo.
+                Então, vale a pena? <strong>Com certeza</strong>, fica evidente que poo nos leva a construir sistemas mais <code>organizados</code>, <code>modulares</code> e <code>fáceis de manter</code>.
             </p>
         </div>
 
